@@ -7,7 +7,7 @@ export const getProducts = async (req,res)=>{
     result.map(product => {
         try{
             fs.writeFileSync(`./src/images/${product.p_id}-${product.p_name}.png`,product.p_image);
-            product.p_image = `creacionesgael-restapi-production.up.railway.app/${product.p_id}-${product.p_name}.png`;
+            product.p_image = `creacionesgael-restapi-production.up.railway.app/${product.p_id}-${product.p_name}.jpg`;
         }catch(error){
             return res.status(500).json({
                 message:'Something went wrong'
